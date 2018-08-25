@@ -1,0 +1,40 @@
+[user]
+	name = Devavrat Sud
+	email = devavrat.sud@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+	grep = auto
+	interactive = auto
+[diff]
+	tool = kdiff3
+[difftool]
+	prompt = false
+[alias]
+	br = branch -avv
+	cm = commit -am
+	co = checkout
+	df = diff --ignore-space-change
+	lg = log -n 40 --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative
+	pl = pull
+	sh = stash
+	shl = stash list
+	shp = stash pop
+	st = status
+	sha = stash apply
+	wc = whatchanged -p
+[core]
+	excludesfile = ~/.git-ignore-files
+	editor = vim
+	ignorecase = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
